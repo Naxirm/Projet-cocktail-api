@@ -1,11 +1,11 @@
 import { hideLoading } from "./toggleLoading.js";
 import get from "./getElement.js";
 
-const displayDrink = (data) => {
+const displayDrink = (drinks) => {
   hideLoading();
 
   // affiche les infos d'un cocktail
-  const drink = data.drinks[0];
+  const drink = drinks.drinks[0];
   // console.log(drink);
   const {
     strDrink: name,

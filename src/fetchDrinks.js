@@ -5,9 +5,8 @@ const fetchDrinks = async (url) => {
 
   try {
     const response = await fetch(url);
-    const data = await response.json();
-    // console.log(data);
-    return data;
+    const drinks = await response.json();
+    return drinks;
   } catch (error) {
     console.log(error);
   }

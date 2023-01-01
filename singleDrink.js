@@ -6,6 +6,9 @@ const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=";
 const presentDrink = async () => {
   // récupère les infos du cocktail
   const id = localStorage.getItem("drink");
+  if (!id) {
+    window.location.replace("./index.html");
+  }
   const drink = await fetchDrinks(
     `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`
   );
